@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { View, Text } from 'react-native';
 
 const BlogContext = React.createContext();
 
@@ -9,7 +10,7 @@ export const BlogProvider = ({ children }) => {
     const addBlogPost = () => {
         setBlogPosts([
         	...blogPosts, 
-        	{ title: `Blog Post #${blogPosts.lenght + 1}` }
+        	{ title: `Blog Post #${blogPosts.length + 1}` }
         ]);
     };
 
