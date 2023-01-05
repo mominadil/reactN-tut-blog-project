@@ -4,6 +4,7 @@ import { View, Text } from 'react-native';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import IndexScreen from './src/screens/IndexScreen';
+import ShowScreen from './src/screens/ShowScreen';
 import { Provider as BlogProvider } from './src/context/BlogContext';
 
 const MyTheme = {
@@ -23,6 +24,7 @@ function App() {
       <NavigationContainer theme={MyTheme}>
         <Stack.Navigator>
           <Stack.Screen name="IndexScreen" component={IndexScreen} options={{ title: 'Blogs', cardStyle: { backgroundColor: 'transparent' } }} />
+          <Stack.Screen name="ShowScreen" component={ShowScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </BlogProvider>
