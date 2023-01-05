@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import IndexScreen from './src/screens/IndexScreen';
-import { BlogProvider } from './src/context/BlogContext';
+import { Provider as BlogProvider } from './src/context/BlogContext';
 
 const MyTheme = {
   ...DefaultTheme,

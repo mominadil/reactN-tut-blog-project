@@ -1,5 +1,3 @@
-import React, { useReducer } from 'react';
-import { View, Text } from 'react-native';
 import createDataContext from './createDataContext';
 
 
@@ -11,8 +9,10 @@ const blogReducer = (state, action) => {
             return state;
     }
 };
-const addBlogPost = () => {
-    dispatch({ type: 'add_blogpost' });
+const addBlogPost = (dispatch) => {
+    return ()=>{
+        dispatch({ type: 'add_blogpost' });
+    };
 };
 
 
