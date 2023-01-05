@@ -22,7 +22,7 @@ function App() {
   return (
     <BlogProvider>
       <NavigationContainer theme={MyTheme}>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName="IndexScreen">
           <Stack.Screen name="IndexScreen" component={IndexScreen} options={{ title: 'Blogs', cardStyle: { backgroundColor: 'transparent' } }} />
           <Stack.Screen name="ShowScreen" component={ShowScreen} />
         </Stack.Navigator>
