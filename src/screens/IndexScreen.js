@@ -29,15 +29,7 @@ const IndexScreen = ({navigation}) => {
     );
 };
 
-IndexScreen.navigationOptions = ({ navigation }) => {
-	return {
-	    headerRight: () => (
-	      <TouchableOpacity onPress={() => navigation.navigate('CreateScreen')}>
-	        <Feather name="plus" size={30} />
-	      </TouchableOpacity>
-	    ),
-  	};
-};
+
 
 
 const styles = StyleSheet.create({
