@@ -32,10 +32,11 @@ function App() {
           </TouchableOpacity>
         ),
       })}>
-      <Stack.Screen name="IndexScreen" component={IndexScreen} />
-      <Stack.Screen name="ShowScreen" component={ShowScreen} />
+      <Stack.Screen name="IndexScreen" component={IndexScreen} options={{ title: 'Blog' }} />
+      <Stack.Screen name="ShowScreen" component={ShowScreen} options={{ title: 'Show Blog' }} />
       <Stack.Screen name="CreateScreen" component={CreateScreen} 
       options={{
+        title:'Create Blog',
         headerRight: null,
       }}
       />

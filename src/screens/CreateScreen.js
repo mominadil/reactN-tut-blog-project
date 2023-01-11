@@ -1,18 +1,29 @@
-import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import React, { useContext, useState } from 'react'
+import { View, Text, StyleSheet, TextInput } from 'react-native'
 import { Context } from '../context/BlogContext';
 
 
-const CreateScreen = ({navigation}) => {
-	return (
-		<View>
-			<Text>create screen</Text>
+const CreateScreen = ({ navigation }) => {
+	const [title, setTitle] = useState('');
+	const [content, setContent] = useState('');
+    return (
+        <View>
+			<Text>Enter Title:</Text>
+			<TextInput 
+			value = {title}
+			onChangeText = {(text) => setTitle(text)}
+			/>
+			<Text>Enter Content:</Text>
+			<TextInput 
+			value = {content}
+			onChangeText = {(text) => setContent(text)}
+			/>
 		</View>
-	)
+    )
 }
 
 const styles = StyleSheet.create({
-	
+
 })
 
 export default CreateScreen
